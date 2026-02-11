@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganhe com Microsoft Rewards</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;background:#f4f7fb;color:#333;}
+.hero{background:linear-gradient(135deg,#0078D7,#00A4EF);color:white;text-align:center;padding:80px 20px;}
+.hero h1{font-size:2.5em;margin-bottom:20px;}
+.hero p{font-size:1.2em;max-width:700px;margin:auto;}
+.cta{display:inline-block;margin-top:30px;padding:15px 35px;background:#FFD700;color:#000;font-weight:600;text-decoration:none;border-radius:8px;font-size:1.1em;transition:0.3s;}
+.cta:hover{transform:scale(1.05);}
+.section{max-width:1000px;margin:auto;padding:60px 20px;}
+.section h2{text-align:center;color:#0078D7;margin-bottom:40px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.08);text-align:center;}
+.card h3{margin-bottom:10px;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center;}
+.step{background:white;padding:20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.05);}
+.chart-container{max-width:600px;margin:auto;}
+.final{background:#0078D7;color:white;text-align:center;padding:60px 20px;}
+footer{text-align:center;padding:20px;font-size:0.9em;color:#777;}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<h1>Ganhe Dinheiro com Microsoft Rewards</h1>
+<p>Transforme suas buscas online em pontos que podem virar dinheiro, créditos e cartões-presente.</p>
+<a href="https://aka.ms/sarefer?referral_hash=68456E0" class="cta">Começar Agora</a>
+</section>
+
+<section class="section">
+<h2>O que é o Microsoft Rewards?</h2>
+<div class="cards">
+<div class="card"><h3>Programa Oficial</h3><p>É um programa da Microsoft que recompensa você por usar seus serviços.</p></div>
+<div class="card"><h3>Ganhe Pontos</h3><p>Pesquisando no Bing, respondendo quizzes e completando tarefas.</p></div>
+<div class="card"><h3>Troque por Recompensas</h3><p>Resgate cartões-presente, créditos ou benefícios exclusivos.</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Passo a Passo para Ganhar</h2>
+<div class="steps">
+<div class="step"><strong>1.</strong> Crie sua conta</div>
+<div class="step"><strong>2.</strong> Use o Bing diariamente</div>
+<div class="step"><strong>3.</strong> Responda quizzes</div>
+<div class="step"><strong>4.</strong> Complete tarefas</div>
+<div class="step"><strong>5.</strong> Troque seus pontos</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Exemplo de Crescimento de Pontos</h2>
+<div class="chart-container">
+<canvas id="pointsChart"></canvas>
+</div>
+</section>
+
+<section class="final">
+<h2>Comece Hoje Mesmo</h2>
+<p>Clique abaixo e crie sua conta com o link especial para maximizar seus pontos.</p>
+<a href="https://aka.ms/sarefer?referral_hash=68456E0" class="cta">Quero Ganhar Agora</a>
+</section>
+
+<footer>
+© 2026 - Microsoft Rewards é propriedade da Microsoft.
+</footer>
+
+<script>
+const ctx=document.getElementById('pointsChart').getContext('2d');
+new Chart(ctx,{
+type:'line',
+data:{labels:['Semana 1','Semana 2','Semana 3','Semana 4'],datasets:[{label:'Pontos Acumulados',data:[500,1200,2000,3200],borderColor:'#0078D7',backgroundColor:'rgba(0,120,215,0.2)',tension:0.3,fill:true}]}});
+</script>
+
+</body>
+</html>
