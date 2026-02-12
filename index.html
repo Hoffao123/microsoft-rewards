@@ -3,49 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ganhe Dinheiro com Microsoft Rewards</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Ganhe com Microsoft Rewards</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    background:#f5f7fa;
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
     color:#333;
 }
 
-/* HERO */
-
+/* HERO SECTION */
 .hero{
-    background:linear-gradient(135deg,#0b5ed7,#1e88e5);
-    color:white;
-    padding:70px 20px 120px 20px;
     position:relative;
-    overflow:hidden;
-}
-
-.hero-container{
-    max-width:1200px;
-    margin:auto;
+    background:linear-gradient(135deg,#1e73be 0%,#2a8be0 50%,#3aa0ff 100%);
+    padding:120px 5% 200px 5%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    flex-wrap:wrap;
+    overflow:hidden;
+    color:white;
 }
 
-.hero-text{
+/* Efeito de luz */
+.hero::after{
+    content:"";
+    position:absolute;
+    top:80px;
+    right:-200px;
+    width:800px;
+    height:800px;
+    background:radial-gradient(circle,rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.15) 40%,rgba(255,255,255,0) 70%);
+    border-radius:50%;
+}
+
+/* Conteúdo lado esquerdo */
+.hero-content{
     max-width:600px;
+    z-index:2;
 }
 
 .hero h1{
     font-size:42px;
-    font-weight:800;
     margin-bottom:20px;
 }
 
@@ -56,75 +57,70 @@ body{
 
 .cta{
     display:inline-block;
+    padding:15px 35px;
     background:#ffc107;
     color:#000;
-    padding:16px 40px;
-    font-weight:700;
-    border-radius:10px;
+    font-weight:600;
     text-decoration:none;
-    font-size:18px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.2);
+    border-radius:8px;
     transition:0.3s;
 }
 
 .cta:hover{
-    transform:translateY(-3px);
+    transform:scale(1.05);
 }
 
-.hero-image img{
-    max-width:420px;
+/* Imagem celular */
+.hero img{
+    max-width:450px;
+    margin-top:80px;
+    position:relative;
+    z-index:2;
 }
 
-/* SECTION */
+/* Transição curva */
+.wave{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:120px;
+    background:#f4f7fb;
+    border-top-left-radius:100% 100px;
+    border-top-right-radius:100% 100px;
+}
 
+/* SEÇÕES */
 .section{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
+    padding:80px 5%;
     text-align:center;
 }
 
 .section h2{
-    font-size:28px;
-    color:#1e88e5;
+    color:#1e73be;
     margin-bottom:20px;
 }
-
-.section p{
-    font-size:18px;
-    margin-bottom:40px;
-}
-
-/* CARDS */
 
 .cards{
     display:flex;
     justify-content:center;
     gap:20px;
     flex-wrap:wrap;
+    margin-top:40px;
 }
 
 .card{
     background:white;
-    padding:20px;
+    padding:25px;
     border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.05);
-    display:flex;
-    align-items:center;
-    gap:12px;
-    min-width:260px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    width:250px;
 }
 
 .card img{
-    width:40px;
+    width:50px;
+    margin-bottom:15px;
 }
-
-.card span{
-    font-weight:600;
-    font-size:16px;
-}
-
-/* STEPS */
 
 .steps{
     display:flex;
@@ -136,27 +132,20 @@ body{
 
 .step{
     background:white;
-    padding:20px;
+    padding:25px;
     border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
     width:200px;
 }
 
 .step img{
-    width:80px;
+    width:60px;
     margin-bottom:15px;
 }
 
-.step h3{
-    font-size:16px;
-}
-
-/* FINAL */
-
 .final{
     text-align:center;
-    padding:80px 20px;
-    background:#eef3f9;
+    padding:80px 5%;
 }
 
 .final img{
@@ -171,13 +160,14 @@ footer{
     color:#777;
 }
 
+/* RESPONSIVO */
 @media(max-width:900px){
-    .hero-container{
+    .hero{
         flex-direction:column;
         text-align:center;
     }
 
-    .hero-image{
+    .hero img{
         margin-top:40px;
     }
 }
@@ -187,94 +177,103 @@ footer{
 <body>
 
 <!-- HERO -->
-
 <section class="hero">
-    <div class="hero-container">
-        <div class="hero-text">
-            <h1>Ganhe Dinheiro com o Microsoft Rewards</h1>
-            <p>Descubra como transformar suas buscas e atividades online em recompensas reais!</p>
-            <a href="https://aka.ms/sarefer?referral_hash=68456E0" class="cta">Comece Agora</a>
-        </div>
-        <div class="hero-image">
-            <img src="assets/hero-smartphone.png" alt="Microsoft Rewards">
-        </div>
-    </div>
+
+<div class="hero-content">
+<h1>Ganhe Dinheiro com o Microsoft Rewards</h1>
+<p>Descubra como transformar suas buscas e atividades online em recompensas reais!</p>
+
+<a href="https://aka.ms/sarefer?referral_hash=68456E0" class="cta">
+Comece Agora
+</a>
+</div>
+
+<img src="assets/celular.png" alt="Microsoft Rewards">
+
+<div class="wave"></div>
+
 </section>
+
 
 <!-- O QUE É -->
-
 <section class="section">
-    <h2>O que é o Microsoft Rewards?</h2>
-    <p>O Microsoft Rewards é o programa da Microsoft que te recompensa por atividades que você já faz online!</p>
+<h2>O que é o Microsoft Rewards?</h2>
+<p>O Microsoft Rewards é o programa da Microsoft que te recompensa por atividades que você já faz online!</p>
 
-    <div class="cards">
-        <div class="card">
-            <img src="assets/icon-cartoes-presente.png">
-            <span>Cartões-Presente</span>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <img src="assets/icon-creditos-store.png">
-            <span>Créditos na Microsoft Store</span>
-        </div>
+<div class="card">
+<img src="assets/cartao.png">
+<h3>Cartões-Presente</h3>
+</div>
 
-        <div class="card">
-            <img src="assets/icon-doacoes.png">
-            <span>Doações para Instituições</span>
-        </div>
-    </div>
+<div class="card">
+<img src="assets/creditos.png">
+<h3>Créditos na Microsoft Store</h3>
+</div>
+
+<div class="card">
+<img src="assets/doacao.png">
+<h3>Doações para Instituições</h3>
+</div>
+
+</div>
 </section>
 
-<!-- COMO GANHAR -->
 
+<!-- PASSO A PASSO -->
 <section class="section">
-    <h2>Como Ganhar Dinheiro com Microsoft Rewards</h2>
-    <p>Siga este passo a passo simples:</p>
+<h2>Como Ganhar Dinheiro com Microsoft Rewards</h2>
 
-    <div class="steps">
-        <div class="step">
-            <img src="assets/step-1-abrir-conta.png">
-            <h3>1. Abra sua conta</h3>
-        </div>
+<div class="steps">
 
-        <div class="step">
-            <img src="assets/step-2-login-bing.png">
-            <h3>2. Faça login no Bing</h3>
-        </div>
+<div class="step">
+<img src="assets/conta.png">
+<p>1. Abra sua conta</p>
+</div>
 
-        <div class="step">
-            <img src="assets/step-3-quizes.png">
-            <h3>3. Responda Quizes Diários</h3>
-        </div>
+<div class="step">
+<img src="assets/bing.png">
+<p>2. Faça login no Bing</p>
+</div>
 
-        <div class="step">
-            <img src="assets/step-4-tarefas.png">
-            <h3>4. Completar Tarefas</h3>
-        </div>
+<div class="step">
+<img src="assets/quizzes.png">
+<p>3. Responda Quizes Diários</p>
+</div>
 
-        <div class="step">
-            <img src="assets/step-5-trocar-pontos.png">
-            <h3>5. Troque seus Pontos</h3>
-        </div>
-    </div>
+<div class="step">
+<img src="assets/tarefas.png">
+<p>4. Completar Tarefas</p>
+</div>
+
+<div class="step">
+<img src="assets/pontos.png">
+<p>5. Troque seus Pontos</p>
+</div>
+
+</div>
 </section>
+
 
 <!-- FINAL -->
-
 <section class="final">
-    <h2>Pronto para Começar?</h2>
-    <p>Clique no botão abaixo e crie sua conta com seu link especial agora — maximize seus pontos desde o primeiro dia!</p>
 
-    <img src="assets/pig-final-completo.png">
+<h2>Pronto para Começar?</h2>
+<p>Clique no botão abaixo e crie sua conta com seu link especial agora.</p>
 
-    <br>
+<img src="assets/porco.png" alt="Ganhe com Microsoft Rewards">
 
-    <a href="https://aka.ms/sarefer?referral_hash=68456E0" class="cta">Quero Ganhar com Microsoft Rewards</a>
+<br>
+
+<a href="https://aka.ms/sarefer?referral_hash=68456E0" class="cta">
+Quero Ganhar com Microsoft Rewards
+</a>
+
 </section>
 
 <footer>
-© 2026 — Todos os direitos reservados.  
-Microsoft Rewards é propriedade da Microsoft.
+© 2026 - Microsoft Rewards é propriedade da Microsoft.
 </footer>
 
 </body>
