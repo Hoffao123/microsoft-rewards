@@ -5,210 +5,209 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ganhe Dinheiro com o Microsoft Rewards</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI, Arial, sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
+font-family:'Poppins',sans-serif;
 background:#f4f6f9;
 color:#333;
 }
 
 /* HERO */
 .hero{
-background:linear-gradient(135deg,#0d5fb6,#2f80ed);
-color:white;
-padding:80px 20px 140px;
 position:relative;
+background:linear-gradient(135deg,#1f6ed4,#3fa0f0);
+color:white;
+padding:90px 20px 120px 20px;
 overflow:hidden;
 }
 
-.hero-container{
-max-width:1100px;
+.hero::after{
+content:"";
+position:absolute;
+bottom:-1px;
+left:0;
+width:100%;
+height:120px;
+background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,#f4f6f9 100%);
+}
+
+.hero-content{
+max-width:1200px;
 margin:auto;
 display:flex;
 align-items:center;
 justify-content:space-between;
 gap:40px;
+flex-wrap:wrap;
 }
 
-.hero-text h1{
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero h1{
 font-size:42px;
+font-weight:700;
 margin-bottom:20px;
 }
 
-.hero-text p{
+.hero p{
 font-size:18px;
 margin-bottom:30px;
-opacity:0.95;
 }
 
-/* BOTÃO PADRÃO */
 .btn-yellow{
-background:linear-gradient(to bottom,#ffd84d,#f4b400);
-color:#000;
-font-weight:bold;
+display:inline-block;
+background:linear-gradient(#ffd84d,#ffbf00);
 padding:16px 40px;
 border-radius:12px;
+font-weight:600;
+color:#222;
 text-decoration:none;
-display:inline-block;
-transition:all .3s ease;
-box-shadow:0 4px 10px rgba(0,0,0,.25);
+box-shadow:0 6px 0 #cc9a00;
+transition:0.2s;
 }
 
 .btn-yellow:hover{
 transform:translateY(-3px);
-box-shadow:0 6px 15px rgba(0,0,0,.35);
-filter:brightness(1.05);
+box-shadow:0 8px 0 #cc9a00;
 }
 
-/* IMAGEM HERO */
-.hero img{
-width:420px;
-border-radius:30px; /* mais arredondado */
-box-shadow:0 15px 35px rgba(0,0,0,.25);
-}
-
-/* SEÇÃO INFO */
-.section{
-padding:80px 20px;
+.hero-img{
+flex:1;
 text-align:center;
+min-width:300px;
+margin-top:40px;
+}
+
+.hero-img img{
+max-width:420px;
+border-radius:30px;
+}
+
+/* SEÇÕES */
+.section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
 }
 
 .section h2{
+text-align:center;
+color:#1f6ed4;
 font-size:28px;
-color:#1e5fbf;
-margin-bottom:20px;
+margin-bottom:30px;
 }
 
 .section p{
-max-width:800px;
-margin:0 auto 40px;
-font-size:18px;
+text-align:center;
+margin-bottom:40px;
+font-size:17px;
 }
 
-/* CARDS BENEFÍCIOS */
-.benefits{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.benefit{
+.card{
 background:white;
-padding:20px 30px;
-border-radius:12px;
+padding:25px;
+border-radius:14px;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
 display:flex;
 align-items:center;
 gap:15px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
-transition:all .3s;
+transition:0.3s;
 }
 
-.benefit:hover{
-transform:translateY(-5px);
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+.card:hover{
+transform:translateY(-8px);
 }
 
-.benefit img{
+.card img{
 width:40px;
 }
 
-/* PASSO A PASSO */
+/* STEPS */
 .steps{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
+margin-top:40px;
 }
 
 .step{
 background:white;
-padding:30px 20px;
-width:200px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
-transition:all .3s;
+padding:25px;
+border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
 text-align:center;
+transition:0.3s;
 }
 
 .step:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,.15);
+transform:translateY(-8px);
 }
 
 .step img{
-width:70px;
+width:60px;
 margin-bottom:15px;
 }
 
-.step p{
-font-weight:600;
-font-size:15px;
-line-height:1.4;
+.step h4{
+font-size:16px;
 }
 
-/* SEÇÃO FINAL */
+/* FINAL */
 .final{
-background:white; /* restaurado branco */
-padding:80px 20px;
+background:white;
+padding:100px 20px;
 text-align:center;
 }
 
 .final img{
-width:500px; /* tamanho restaurado */
-margin:40px 0;
+max-width:600px;
+margin:40px auto;
+display:block;
 }
 
 /* FOOTER */
 footer{
+text-align:center;
 padding:30px;
 font-size:14px;
 color:#666;
-text-align:center;
-background:#f0f0f0;
 }
-
-@media(max-width:900px){
-
-.hero-container{
-flex-direction:column;
-text-align:center;
-}
-
-.hero img{
-width:90%;
-}
-
-.steps{
-flex-direction:column;
-align-items:center;
-}
-
-}
-
 </style>
 </head>
+
 <body>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-container">
+<div class="hero-content">
 
 <div class="hero-text">
 <h1>Ganhe Dinheiro com o Microsoft Rewards</h1>
 <p>Descubra como transformar suas buscas e atividades online em recompensas reais!</p>
-<a href="#" class="btn-yellow">Comece Agora</a>
+
+<a href="https://rewards.bing.com/welcome?rh=68456E0&ref=rafsrchae&form=ML2XE3&OCID=ML2XE3&PUBL=RewardsDO&CREA=ML2XE3" 
+target="_blank" 
+class="btn-yellow">
+Comece Agora
+</a>
 </div>
 
-<img src="assets/hero-smartphone.png" alt="Microsoft Rewards">
+<div class="hero-img">
+<img src="assets/hero-smartphone.png" alt="">
+</div>
 
 </div>
 </section>
@@ -218,23 +217,26 @@ align-items:center;
 <h2>O que é o Microsoft Rewards?</h2>
 <p>O Microsoft Rewards é o programa da Microsoft que te recompensa por atividades que você já faz online!</p>
 
-<div class="benefits">
-
-<div class="benefit">
+<div class="cards">
+<div class="card">
 <img src="assets/icon-cartoes-presente.png">
 <span>Cartões-Presente</span>
 </div>
 
-<div class="benefit">
+<div class="card">
 <img src="assets/icon-creditos-store.png">
 <span>Créditos na Microsoft Store</span>
 </div>
 
-<div class="benefit">
+<div class="card">
 <img src="assets/icon-doacoes.png">
 <span>Doações para Instituições</span>
 </div>
 
+<div class="card">
+<img src="assets/icon-cartoes-presente.png">
+<span>E Muito Mais!</span>
+</div>
 </div>
 </section>
 
@@ -247,27 +249,27 @@ align-items:center;
 
 <div class="step">
 <img src="assets/step-1-abrir-conta.png">
-<p>1. Abra sua conta</p>
+<h4>1. Abra sua conta</h4>
 </div>
 
 <div class="step">
 <img src="assets/step-2-login-bing.png">
-<p>2. Faça login no Bing</p>
+<h4>2. Faça login no Bing</h4>
 </div>
 
 <div class="step">
 <img src="assets/step-3-quizes.png">
-<p>3. Responda Quizes Diários</p>
+<h4>3. Responda Quizes Diários</h4>
 </div>
 
 <div class="step">
 <img src="assets/step-4-tarefas.png">
-<p>4. Complete Tarefas</p>
+<h4>4. Completar Tarefas</h4>
 </div>
 
 <div class="step">
 <img src="assets/step-5-trocar-pontos.png">
-<p>5. Troque seus Pontos</p>
+<h4>5. Troque seus Pontos</h4>
 </div>
 
 </div>
@@ -276,16 +278,20 @@ align-items:center;
 <!-- FINAL -->
 <section class="final">
 <h2>Pronto para Começar?</h2>
-<p>Clique no botão abaixo e crie sua conta agora — maximize seus pontos desde o primeiro dia!</p>
+<p>Clique no botão abaixo e crie sua conta com seu <strong>link especial agora</strong> — maximize seus pontos desde o primeiro dia!</p>
 
-<img src="assets/pig-final-completo.png" alt="Recompensas">
+<img src="assets/pig-final-completo.png">
 
-<a href="#" class="btn-yellow">Quero Ganhar com Microsoft Rewards</a>
-
+<a href="https://rewards.bing.com/welcome?rh=68456E0&ref=rafsrchae&form=ML2XE3&OCID=ML2XE3&PUBL=RewardsDO&CREA=ML2XE3"
+target="_blank"
+class="btn-yellow">
+Quero Ganhar com Microsoft Rewards
+</a>
 </section>
 
 <footer>
-© 2026 — Todos os direitos reservados.
+© 2026 — Todos os direitos reservados.<br>
+Microsoft Rewards é propriedade da Microsoft. Você pode ganhar recompensas conforme os termos do programa.
 </footer>
 
 </body>
