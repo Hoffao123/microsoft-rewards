@@ -20,13 +20,16 @@ body{
     color:#333;
 }
 
-/* ================= HERO TOPO ================= */
+/* ================= HERO SUPERIOR ================= */
 
 .hero{
-    background: linear-gradient(135deg,#1f7fd3,#0f5ea8);
+    background:
+    radial-gradient(circle at 20% 40%, rgba(255,255,255,0.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.12), transparent 40%),
+    linear-gradient(135deg,#1f7fd3 0%,#0f5ea8 100%);
     color:white;
     text-align:center;
-    padding:80px 20px 120px 20px;
+    padding:90px 20px 140px 20px;
     position:relative;
 }
 
@@ -37,49 +40,52 @@ body{
 
 .hero p{
     font-size:20px;
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
+/* BOTÃO AMARELO PADRÃO */
 .btn-principal{
     display:inline-block;
     background:linear-gradient(to bottom,#ffd54d,#f6b800);
     color:#333;
-    padding:16px 40px;
+    padding:16px 45px;
     font-size:20px;
     font-weight:bold;
     border-radius:10px;
     text-decoration:none;
     box-shadow:0 6px 0 #d39e00;
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 .btn-principal:hover{
-    transform:translateY(-3px);
-    box-shadow:0 9px 15px rgba(0,0,0,0.3);
+    transform:translateY(-4px);
+    box-shadow:0 12px 20px rgba(0,0,0,0.3);
 }
 
 /* ================= SEÇÃO SOBRE ================= */
 
 .sobre{
     max-width:1200px;
-    margin:-80px auto 60px auto;
+    margin:-110px auto 60px auto;
     background:white;
-    padding:60px 30px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    padding:80px 40px 60px 40px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
     display:flex;
     align-items:center;
-    gap:40px;
+    gap:50px;
     flex-wrap:wrap;
+    position:relative;
 }
 
 .sobre-texto{
     flex:1;
-    min-width:300px;
+    min-width:320px;
+    padding-top:40px; /* evita texto escondido */
 }
 
 .sobre-texto h2{
-    font-size:28px;
+    font-size:30px;
     margin-bottom:20px;
     color:#0f5ea8;
 }
@@ -89,17 +95,19 @@ body{
     margin-bottom:30px;
 }
 
+/* HERO SMARTPHONE */
 .sobre-img{
     flex:1;
     text-align:center;
+    margin-top:-70px; /* sobe para tocar o azul */
 }
 
 .sobre-img img{
     max-width:100%;
-    border-radius:40px;
+    border-radius:45px;
 }
 
-/* ================= MINI BOTÕES ================= */
+/* ================= BENEFÍCIOS ================= */
 
 .beneficios{
     display:flex;
@@ -109,31 +117,31 @@ body{
 
 .beneficio{
     flex:1;
-    min-width:220px;
+    min-width:230px;
     background:#f1f4f8;
-    padding:18px;
-    border-radius:12px;
+    padding:18px 20px;
+    border-radius:14px;
     display:flex;
     align-items:center;
     gap:12px;
     font-weight:bold;
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 .beneficio:hover{
     transform:translateY(-5px);
-    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    box-shadow:0 12px 20px rgba(0,0,0,0.15);
 }
 
 .beneficio img{
     width:40px;
 }
 
-/* ================= PASSO A PASSO ================= */
+/* ================= PASSOS ================= */
 
 .passos{
     max-width:1200px;
-    margin:60px auto;
+    margin:80px auto;
     text-align:center;
     padding:0 20px;
 }
@@ -151,7 +159,7 @@ body{
 .passos-grid{
     display:flex;
     flex-wrap:wrap;
-    gap:20px;
+    gap:25px;
     justify-content:center;
 }
 
@@ -159,17 +167,18 @@ body{
     background:white;
     padding:25px;
     border-radius:15px;
-    width:200px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+    width:210px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
 }
 
 .passo:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
+    box-shadow:0 18px 28px rgba(0,0,0,0.15);
 }
 
 .passo img{
-    width:70px;
+    width:75px;
     margin-bottom:15px;
 }
 
@@ -182,17 +191,19 @@ body{
 .final{
     background:white;
     text-align:center;
-    padding:60px 20px;
+    padding:80px 20px;
 }
 
 .final img{
     max-width:100%;
-    margin:30px 0;
+    margin:40px 0;
 }
+
+/* ================= FOOTER ================= */
 
 footer{
     text-align:center;
-    padding:20px;
+    padding:25px;
     font-size:14px;
     color:#777;
 }
@@ -201,9 +212,18 @@ footer{
 
 @media(max-width:900px){
 
+    .hero h1{
+        font-size:30px;
+    }
+
     .sobre{
         flex-direction:column;
         text-align:center;
+        margin-top:-90px;
+    }
+
+    .sobre-img{
+        margin-top:-40px;
     }
 
     .beneficios{
@@ -213,7 +233,6 @@ footer{
     .beneficio{
         justify-content:center;
     }
-
 }
 
 </style>
@@ -224,6 +243,7 @@ footer{
 <section class="hero">
     <h1>Ganhe Dinheiro com o Microsoft Rewards</h1>
     <p>Descubra como transformar suas buscas e atividades online em recompensas reais!</p>
+
     <a href="https://aka.ms/sarefer?referral_hash=68456E0" target="_blank" class="btn-principal">
         Comece Agora
     </a>
@@ -231,12 +251,15 @@ footer{
 
 <!-- SOBRE -->
 <section class="sobre">
-    
+
     <div class="sobre-texto">
         <h2>O que é o Microsoft Rewards?</h2>
-        <p>O Microsoft Rewards é o programa da Microsoft que te recompensa por atividades que você já faz online!</p>
+        <p>
+        O Microsoft Rewards é o programa da Microsoft que te recompensa por atividades que você já faz online!
+        </p>
 
         <div class="beneficios">
+
             <div class="beneficio">
                 <img src="assets/icon-cartoes-presente.png">
                 Cartões-Presente
@@ -251,6 +274,12 @@ footer{
                 <img src="assets/icon-doacoes.png">
                 Doações para Instituições
             </div>
+
+            <div class="beneficio">
+                <img src="assets/icon-cartoes-presente.png">
+                E Muito Mais!
+            </div>
+
         </div>
     </div>
 
@@ -298,7 +327,10 @@ footer{
 <!-- FINAL -->
 <section class="final">
     <h2>Pronto para Começar?</h2>
-    <p>Clique no botão abaixo e crie sua conta com seu link especial agora — maximize seus pontos desde o primeiro dia!</p>
+    <p>
+    Clique no botão abaixo e crie sua conta com seu link especial agora —
+    maximize seus pontos desde o primeiro dia!
+    </p>
 
     <img src="assets/pig-final-completo.png">
 
